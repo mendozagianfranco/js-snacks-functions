@@ -6,13 +6,23 @@ e buonasera se è sera (oltre le 17)
 */
 
 const name = 'Mario';
+let date = new Date();
+let hour = date.getHours();
 
 
 // Dichiara la funzione qui.
-
+function sayHello(name) {
+    if (hour < 13) {
+        return `Buongiorno ${name}`;
+    } else if (hour >= 13 && hour <= 17) {
+        return `Buon pomeriggio ${name}`;
+    } else if (hour > 17) {
+        return `Buonsera ${name}`;
+    }
+}
 
 // Invoca la funzione qui e stampa il risultato in console
-
+console.log(sayHello(name));
 
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
